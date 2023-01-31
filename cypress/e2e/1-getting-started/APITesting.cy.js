@@ -1,6 +1,6 @@
 /// <reference types = "cypress"/>
 
-it("google search", () => {
+it("First API testing", () => {
   cy.request("https://restcountries.com/v3.1/name/germany").then(
     ($response) => {
       expect($response.status).to.eq(200);
@@ -8,6 +8,16 @@ it("google search", () => {
     }
   );
 });
-//for recieve response, use it "then"
-//   ش میکنیمyeild که ابجکتی که به ما برمیگرده رو
-// حالا ما ابجکت ریسپانس رو داریم.
+
+it("API chaining", () => {
+  cy.request("https://restcountries.com/v3.1/name/australia").then(
+    ($response) => {
+      expect($response.status).to.eq(200);
+      cy.request("https://localhost:3000/countries", {
+        name: "australia",
+        capital: $response.body[0].capital[0]
+        currency: 
+      });
+    }
+  );
+});
