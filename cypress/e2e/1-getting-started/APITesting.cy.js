@@ -18,6 +18,8 @@ it("API chaining", () => {
         capital: $response.body[0].capital[0],
         currency: countryCurrencyKey[0]
       })
-      cy.request("GET", "https://localhost:3000/countries").then(($response) => {}
+      cy.request("GET", "https://localhost:3000/countries").then(($response) => {
+
+      })
     })
 });
