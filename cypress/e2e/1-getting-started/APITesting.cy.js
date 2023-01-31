@@ -8,11 +8,6 @@ it("google search", () => {
     }
   );
 });
-
 //for recieve response, use it "then"
 //   ش میکنیمyeild که ابجکتی که به ما برمیگرده رو
 // حالا ما ابجکت ریسپانس رو داریم.
-teststs;
-toString;
-erter;
-dgdg;
