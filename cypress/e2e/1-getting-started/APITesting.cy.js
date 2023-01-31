@@ -17,7 +17,7 @@ it("API chaining", () => {
         
       cy.request("https://localhost:3000/countries", {
         name: "australia",
-        capital: $response.body[0].capital[0]
+        capital: $response.body[0].capital[0],
         currency: countryCurrencyKey[0]
       });
     }
