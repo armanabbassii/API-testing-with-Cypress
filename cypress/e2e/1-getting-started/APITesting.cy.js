@@ -25,7 +25,7 @@ it.only('API chaining', () => {
               result = item
             }
           });
-          expect ( result).to.not.empty
+          expect(result).to.not.empty
           expect(result.capital).to.eql('Canberra')
           expect(result.currency).to.eql('AUD')
       })
