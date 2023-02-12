@@ -2,7 +2,7 @@
 
 
 it.only("content-type create", () => {
-    cy.request(POST, "http://rad-qc.sandpod.ir/api/documentation#/Content-Type/store-api-core-content-types", {
+    cy.request(POST, "http://rad-qc.sandpod.ir/api/core/content-types", {
         name: "api testing",
         code: "test123",
         type: "content",
