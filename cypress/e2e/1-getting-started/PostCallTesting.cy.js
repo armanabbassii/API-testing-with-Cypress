@@ -14,21 +14,23 @@ describe("post content-type", () => {
         "X-CSRF-TOKEN": "",
       },
       body: {
-        name: "api testing",
-        code: 23232323232323,
         type: "content",
+        name: "contentTest",
+        code: "332244556",
         ig: "601:IG-0000601:0",
+        description: "testDiscription",
+        ownerId: "",
         allFields: true,
-        description: "descriptionText",
+        permissionType: "private",
       },
     }).then((response) => {
       expect(response.status).to.eql(200);
-      expect(response.body.result).has.property("name", "api testing");
-      expect(response.body.result).has.property("code", "23232323232323");
+      expect(response.body.result).to.have.property("name");
+      expect(response.body.result).has.property("code", "332244556");
       expect(response.result.metadata).has.property("ig", "601:IG-0000601:0");
       expect(response.result.metadata).has.property(
         "description",
-        "descriptionText"
+        "testDiscription"
       );
     });
   });
