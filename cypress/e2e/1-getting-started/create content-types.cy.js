@@ -25,10 +25,11 @@ describe("post content-type", () => {
       },
     }).then((response) => {
       expect(response.status).to.eql(200);
-      expect(response.body.result[0]).to.have.deep.property(
-        "name[0]",
-        "contentTest"
-      );
+      console.log(response);
+      expect(response.body.result.name).to.equal('contentTest')
+
+      expect(response.body.name).to.be.contentTest
+      expect(response.body.result[0]).to.have.deep.property("name[0]","contentTest");
       expect(response.body.result).has.property("code", "332244556");
       expect(response.result.metadata).has.property("ig", "601:IG-0000601:0");
       expect(response.result.metadata).has.property(

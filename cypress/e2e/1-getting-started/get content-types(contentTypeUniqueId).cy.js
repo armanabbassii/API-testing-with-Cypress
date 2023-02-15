@@ -14,7 +14,7 @@ describe("get content-type(contentTypeUniqueId)", () => {
             headers: {
                 
             }
-    })
+        })
     })
     
 }
