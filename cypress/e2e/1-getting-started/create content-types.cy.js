@@ -24,8 +24,6 @@ describe("post content-type", () => {
         permissionType: "private",
       },
     }).then((response) => {
-      console.log(response.body.result[0]);
-
       expect(response.status).to.eql(200);
       expect(response.body.result[0]).to.have.deep.property(
         "name[0]",
