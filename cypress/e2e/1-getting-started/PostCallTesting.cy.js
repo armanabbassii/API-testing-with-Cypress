@@ -36,8 +36,5 @@ describe("post content-type", () => {
         "testDiscription"
       );
     });
-    cy.request({
-      method: "GET",
-    });
   });
 });
