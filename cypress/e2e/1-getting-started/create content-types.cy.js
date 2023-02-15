@@ -8,9 +8,9 @@ describe("post content-type", () => {
       method: "POST",
       url: "http://rad-qc.sandpod.ir/api/core/content-types",
       hearders: {
-        accept: "application/json",
-        "Access-Token": "67680a881cbc463bbaef24da917e3e0b.XzIwMjMy",
-        "Client-Id": "17959574q2f0347718971594ccd86f3f4",
+        "accept": "application/json",
+        "Access-Token":"84a1f13c148943ef9ce1067e9c95c650.XzIwMjMy",
+        "Client-Id":"17959574q2f0347718971594ccd86f3f4",
         "X-CSRF-TOKEN": "",
       },
       body: {
@@ -26,6 +26,8 @@ describe("post content-type", () => {
     }).then((response) => {
       expect(response.status).to.eql(200);
       console.log(response);
+      expect(response.body.errorCode).to.eql(406);
+
       expect(response.body.result.name).to.equal('contentTest')
 
       expect(response.body.name).to.be.contentTest
