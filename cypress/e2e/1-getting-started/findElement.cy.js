@@ -1,3 +1,7 @@
 /// <reference types = 'cypress'/>
 
-describe("nameofsecond test", () => {});
+describe("name of second test", () => {
+  it("name of testcase 1", () => {
+    cy.visit("https://www.play2.automationcamp.ir/index.html");
+  });
+});
