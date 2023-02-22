@@ -3,7 +3,7 @@
 describe("2.1 name of second test", () => {
   it("name of testcase 1", () => {
     cy.visit("https://www.play2.automationcamp.ir/index.html");
-    cy.get("#fname").type("Arman");
+    cy.get("#fname").type("Arman").click();
   });
   /*
   it('2.2 scroll',()=>{
@@ -21,7 +21,11 @@ describe("2.1 name of second test", () => {
   it("2.4 find relative element", () => {
     cy.visit("https://www.play2.automationcamp.ir/index.html");
     cy.get("#owc").children;
-    cy.get("#owc").children("[value = 'option 2']").check();
+    cy.get("#owc").children("[value = 'option 2']").click();
     cy.contains("Singer").parent();
+    cy.get("#owc")
+      .children("[value = 'option 2']")
+      .siblings()
+      .should("have.length", 3);
   });
 });
