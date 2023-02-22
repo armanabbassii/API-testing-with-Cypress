@@ -17,7 +17,7 @@ describe("2.1 name of second test", () => {
     cy.contains('label[for=moption]',' Option 2').click()
     cy.get('label[for=moption]').contains(' Option 2').click()
   })
-*/
+  
   it("2.4 find relative element", () => {
     cy.visit("https://www.play2.automationcamp.ir/index.html");
     cy.get("#owc").children;
@@ -27,5 +27,13 @@ describe("2.1 name of second test", () => {
       .children("[value = 'option 2']")
       .siblings()
       .should("have.length", 3);
+  });
+*/
+
+  it("2.5 Ancestors", () => {
+    cy.visit("https://en.wikipedia.org/wiki/Main_Page");
+    cy.get("div#mp-welcome").parents();
+    cy.get("div#mp-welcome").parents("div#mw-content-text");
+    cy.get("div#mp-welcome").parentsUntil("#bodyContent");
   });
 });

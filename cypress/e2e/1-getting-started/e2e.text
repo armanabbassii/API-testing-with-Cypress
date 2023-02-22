@@ -3,3 +3,5 @@ describe is an function,
 In the cypress GUI, when we click on each of test, cypress access to test runner and run specefic test case. s
 scrolls just operation in a action. so after touch a element, we need to click on. 
 2.4 id in css selector shows by #
+
+2.6 some commands in cypress are chainable, such as find, its wrong => cy.find   its true => cy.get(selector).find(selector)
