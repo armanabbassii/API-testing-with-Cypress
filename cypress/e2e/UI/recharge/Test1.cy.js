@@ -6,7 +6,9 @@ describe ("Test suit1", ()=>{
         cy.get('.pr-md-5 > .h1').should('contain','The leading one-stop-shop for all ')
         //cy.title().should('Recharge.com | Recharge.com | The leading one-stop-shop for all your branded payment needs')
         cy.contains('The leading one-stop-shop for all ')
+        cy.contains('Get to know us').click()
         
+        //cy.get('.link-blue>.span').should('Get to know us').click()
         //cy.get('class="h1"').should('The leading one-stop-shop for all ')
         //cy.get($h1.first()).to.contain('The leading one-stop-shop for all')
         //cy.get('span').contains('Where we are').click()
