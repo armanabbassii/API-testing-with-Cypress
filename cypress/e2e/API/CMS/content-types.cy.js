@@ -1,7 +1,8 @@
 /// <reference types = "cypress"/>
 
 describe("content-type", () => {
-  let AccessToken = "71054454f7e148a0b263b764fc38d659.XzIwMjMy";
+  let AccessToken = "f68423f5c80a41d0be989d51445a0ca5.XzIwMjMy";
+  let ClientId = "17959574q2f0347718971594ccd86f3f4";
 
   it("create content-type", () => {
     cy.request({
@@ -9,8 +10,8 @@ describe("content-type", () => {
       url: "http://rad-qc.sandpod.ir/api/core/content-types",
       hearders: {
         accept: "application/json",
-        "Access-Token": "942e970c0d1541a495e98204251cb247.XzIwMjMy",
-        "Client-Id": "17959574q2f0347718971594ccd86f3f4",
+        "Access-Token": AccessToken,
+        "Client-Id": ClientId,
         "X-CSRF-TOKEN": "",
       },
       body: {
