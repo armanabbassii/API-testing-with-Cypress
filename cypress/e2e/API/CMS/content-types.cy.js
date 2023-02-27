@@ -9,14 +9,14 @@ describe("content-type", () => {
       url: "http://rad-qc.sandpod.ir/api/core/content-types",
       hearders: {
         accept: "application/json",
-        "Access-Token": "84a1f13c148943ef9ce1067e9c95c650.XzIwMjMy",
+        "Access-Token": "942e970c0d1541a495e98204251cb247.XzIwMjMy",
         "Client-Id": "17959574q2f0347718971594ccd86f3f4",
         "X-CSRF-TOKEN": "",
       },
       body: {
         type: "content",
-        name: "contentTest",
-        code: "332244556",
+        name: "contentTest2",
+        code: "33224455666",
         ig: "601:IG-0000601:0",
         description: "testDiscription",
         ownerId: "",
