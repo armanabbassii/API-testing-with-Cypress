@@ -20,4 +20,11 @@ describe("Test suit1", () => {
       .should("contain", "150")
       .click();
   });
+
+  it("TestCase3", () => {
+    cy.visit("https://company.recharge.com/contact-us");
+    cy.get(".holder > .button-blue > span")
+      .should("contain", "Contact our customer service")
+      .click();
+  });
 });
