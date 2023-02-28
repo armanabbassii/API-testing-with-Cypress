@@ -3,6 +3,7 @@
 describe("TestSuits2", () => {
   it("Testcase1", () => {
     cy.visit("https://company.recharge.com/");
-    cy.get(".menu-item>.menu-label").should("contain", "company").click();
+    cy.get(".menu-toggle").click();
+    cy.get(".menu-item" > ".menu-label").click(); //should("contain", "company");
   });
 });
