@@ -7,18 +7,17 @@ describe("Test suit1", () => {
       "contain",
       "The leading one-stop-shop for all "
     );
+
     //cy.title().should('Recharge.com | Recharge.com | The leading one-stop-shop for all your branded payment needs')
     cy.contains("The leading one-stop-shop for all ");
     cy.contains("Get to know us").click();
     cy.get(".holder > .h1").should("contain", "Branded payments made ");
-
-    it("TestCase2", () => {
-      cy.visit("https://company.recharge.com/our-story");
-      cy.wait(5);
-      cy.get(":nth-child(1) > .feature > .feature-number").should(
-        "contain",
-        "150"
-      );
-    });
+  });
+  it("TestCase2", () => {
+    cy.visit("https://company.recharge.com/our-story");
+    cy.wait(500);
+    cy.get(":nth-child(1) > .feature > .feature-number")
+      .should("contain", "150")
+      .click();
   });
 });
