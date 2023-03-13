@@ -1,7 +1,7 @@
 /// <reference types = "cypress"/>
 
 describe("Testsuite1", () => {
-  it("TestCase1", () => {
+  it("TestCase2", () => {
     cy.visit("https://kidzy.land");
     cy.get(".intro-first").should("contain", "بچه‌ها ");
   });
