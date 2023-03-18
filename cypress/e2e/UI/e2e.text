@@ -5,3 +5,5 @@ scrolls just operation in a action. so after touch a element, we need to click o
 2.4 id in css selector shows by #
 
 2.6 some commands in cypress are chainable, such as find, its wrong => cy.find   its true => cy.get(selector).find(selector)
+
+contains just specific find TEXT, 
