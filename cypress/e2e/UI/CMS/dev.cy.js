@@ -21,3 +21,4 @@ it("OpenSSO", () => {
   cy.get("#authLoginBtn").contains("ورود");
 });
 ymn;
+cc;
