@@ -2,10 +2,10 @@
 
 it("testcase1", () => {
   cy.visit("https://www.google.com/");
-  cy.get("input[name=q]").type("time{enter}");
-  cy.contains("time.ir").click();
+  cy.get("#APjFqb").type("wikipedia{enter}");
+  cy.contains("www.wikipedia.org").click();
 
-  cy.origin("https://www.time.ir", () => {
-    cy.get("#digitalClock");
+  cy.origin("https://www.wikipedia.org/", () => {
+    cy.get("#searchInput").type("Test done");
   });
 });
