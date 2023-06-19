@@ -6,21 +6,17 @@ describe("TestSuite1", () => {
   it("testcase1", () => {
     cy.visit("http://dev.cms.test/");
     cy.get(".login-btn").contains("ورود با نام کاربری").click();
-    /*
+
     cy.origin(SSOLOGIN, () => {
       cy.get("input[name=identity]").type(USERNAME);
       cy.get("#authPassword-inp").type(PASSWORD);
       cy.get("#authLoginBtn").click();
-    });*/
+    });
   });
 });
 
 /*
-describe("Suite1", () => {
-  it("login", () => {
-    cy.visit("http://dev.cms.test/");
-    cy.get(".login-btn").contains("ورود با نام کاربری").click();
-  });
+
 
   it("2-test2", function () {
     cy.origin("https://accounts.pod.ir", () => {
