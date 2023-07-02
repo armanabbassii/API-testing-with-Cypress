@@ -1,5 +1,17 @@
-/*/// <reference types = "cypress"/>
+/// <reference types = "cypress"/>
 
+describe("TestSuite1", () => {
+  it("testcase1", () => {
+    cy.viewport(600, 500);
+    cy.visit("http://dev.cms.test/");
+    cy.window().its("innerWidth").should("eq", 600);
+    cy.window().its("innerHeight").should("eq", 500);
+    let variableName = { properyName: "test" };
+    cy.wrap(variableName).its("properyName").should("eq", "test");
+  });
+});
+
+/*
 import { PASSWORD, USERNAME } from "./constans";
 
 describe("TestSuite1", () => {
@@ -18,7 +30,7 @@ describe("TestSuite1", () => {
     });
   });
 });
-*/
+/*
 
 /// <reference types="cypress"/>
 
@@ -32,8 +44,10 @@ describe("TestSuite1", () => {
 
     // Switch to the new window
     cy.window().then((win) => {
-      const newWindowUrl = win.location.href;
-      cy.visit(newWindowUrl);
+      // Open the new window with a specific URL
+      win.open(
+        "http://dev.cms.test/login?redirect=true&code_challenge_method=S256&code_challenge=cgQZyBBAg6XSiBZZ1VBETnhKHjnIu18jOYOPqsG6Edw&scope=profile&prompt=login"
+      );
 
       // Perform actions on the new window
       cy.get("input[name=identity]").type(USERNAME);

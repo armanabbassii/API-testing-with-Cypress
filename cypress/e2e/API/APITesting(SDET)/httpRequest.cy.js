@@ -1,8 +1,12 @@
-/// <reference types = "cypress"/>
+/// <reference types="Cypress" />
 
-describe("https requests", () => {
-  it("get call", () => {
-    //for send any type of request, write cy.request model        (type of request , "url beteen double quatation")
-    //we need to verify something use .its
+describe("Session17_ApiAutomation", () => {
+  it("SimpleRequests", () => {
+    cy.request("https://restcountries.com/v3.1/name/germany").then(
+      ($response) => {
+        expect($response.status).to.eq(200);
+        expect($response.body[0].capital[0]).eq("Berlin");
+      }
+    );
   });
 });
