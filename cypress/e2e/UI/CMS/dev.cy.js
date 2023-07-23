@@ -1,5 +1,5 @@
 /// <reference types = "cypress"/>
-
+/*
 describe("TestSuite1", () => {
   it("testcase1", () => {
     cy.viewport(600, 500);
@@ -10,8 +10,8 @@ describe("TestSuite1", () => {
     cy.wrap(variableName).its("properyName").should("eq", "test");
   });
 });
+*/
 
-/*
 import { PASSWORD, USERNAME } from "./constans";
 
 describe("TestSuite1", () => {
@@ -21,15 +21,13 @@ describe("TestSuite1", () => {
     cy.wait(15000);
 
     cy.origin("https://accounts.pod.ir", () => {
-      cy.visit(
-        "/oauth2/authorize/index.html?client_id=17959574q2f0347718971594ccd86f3f4&response_type=code&redirect_uri=http://dev.cms.test/login?redirect=true&code_challenge_method=S256&code_challenge=cgQZyBBAg6XSiBZZ1VBETnhKHjnIu18jOYOPqsG6Edw&scope=profile&prompt=login"
-      );
       cy.get("input[name=identity]").type(USERNAME);
       cy.get("#authPassword-inp").type(PASSWORD);
       cy.get("#authLoginBtn").click();
     });
   });
 });
+
 /*
 
 /// <reference types="cypress"/>
