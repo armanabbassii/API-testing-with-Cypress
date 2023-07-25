@@ -12,7 +12,7 @@ describe("TestSuite1", () => {
 });
 */
 
-import { PASSWORD, USERNAME } from "./constans";
+//import { PASSWORD, USERNAME } from "./constans";
 
 describe("TestSuite1", () => {
   it("testcase1", () => {
@@ -20,9 +20,9 @@ describe("TestSuite1", () => {
     cy.get(".login-btn").contains("ورود با نام کاربری").click();
     cy.wait(15000);
 
-    cy.origin("https://accounts.pod.ir", () => {
-      cy.get("input[name=identity]").type(USERNAME);
-      cy.get("#authPassword-inp").type(PASSWORD);
+    cy.origin("http://dev.cms.test", () => {
+      cy.get("input[name=identity]").type("armanbbasi");
+      cy.get("#authPassword-inp").type("armandillo1995");
       cy.get("#authLoginBtn").click();
     });
   });
