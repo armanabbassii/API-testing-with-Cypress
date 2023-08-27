@@ -1,8 +1,8 @@
 /// <reference types="cypress" />
 
 // it("Log into using Playwright and apply to Cypress", () => {
-//   cy.visit("http://dev.cms.test/");
-//   cy.get(".login-btn").contains("ورود با نام کاربری").click();
+// cy.visit("http://dev.cms.test/");
+// cy.get(".login-btn").contains("ورود با نام کاربری").click();
 
 //   cy.log("Creating BBC session and pulling cookies to apply to Cypress.");
 //   cy.task("getLoggedInSession", null, { log: false }).then((cookies) => {
@@ -24,24 +24,27 @@ Cypress.Commands.add("getLoggedInSession", () => {
 
     // cy.contains("مدیریت کاربران").click();
   });
+  // cy.reload();
 });
+// });
+// });
 
 // Cypress.Commands.add("getLoggedInSession", () => {
 //   cy.log("Hello there");
 // });
 // start
 
-describe("Playwright Login with Cypress Integration", () => {
-  it("The test can be simplified with a Cypress.command", () => {
-    // cy.visit("http://dev.cms.test/");
-    // cy.get(".login-btn").contains("ورود با نام کاربری").click();
-    // cy.log(
-    //   "Creating Playwright session and pulling cookies to apply to Cypress."
-    // );
+// describe("Playwright Login with Cypress Integration", () => {
+it("The test can be simplified with a Cypress.command", () => {
+  // cy.visit("http://dev.cms.test/");
+  // cy.get(".login-btn").contains("ورود با نام کاربری").click();
+  // cy.log(
+  //   "Creating Playwright session and pulling cookies to apply to Cypress."
+  // );
 
-    cy.getLoggedInSession();
-    // cy.contains('YOUR_BUTTON_CLASS', 'Customer');
+  cy.getLoggedInSession();
+  // cy.contains('YOUR_BUTTON_CLASS', 'Customer');
 
-    //cy.reload();
-  });
+  // cy.reload();
 });
+// });

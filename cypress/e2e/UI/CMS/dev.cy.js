@@ -21,8 +21,8 @@ describe("TestSuite1", () => {
     cy.wait(15000);
 
     cy.origin("http://dev.cms.test", () => {
-      cy.get("input[name=identity]").type("armanbbasi");
-      cy.get("#authPassword-inp").type("armandillo1995");
+      cy.get("input[name=identity]").type("Armanabbasi");
+      cy.get("#authPassword-inp").type("a@123456");
       cy.get("#authLoginBtn").click();
     });
   });
@@ -59,7 +59,7 @@ describe("TestSuite1", () => {
   it("2-test2", function () {
     cy.origin("https://accounts.pod.ir", () => {
       cy.get("input[name=identity]").type("Armanabbasi");
-      cy.get("#authPassword-inp").type("Armandillo1995");
+      cy.get("#authPassword-inp").type("a@123456");
       cy.get("#authLoginBtn").click();
     });
   });
