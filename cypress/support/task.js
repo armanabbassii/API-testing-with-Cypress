@@ -1,7 +1,7 @@
 const playwright = require("playwright");
 
 const USERNAME = "Armanabbasi";
-const PASSWORD = "armandillo1995";
+const PASSWORD = "a@123465";
 
 module.exports = {
   async getLoggedInSession() {
