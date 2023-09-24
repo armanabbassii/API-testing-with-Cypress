@@ -1,2 +1,8 @@
 node_modules
 constans
+/test-results/
+/playwright-report/
+/playwright/.cache/
+playwright.config.js
+tests
+tests-examples

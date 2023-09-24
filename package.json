@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "cypress with cucumber examples",
   "main": "githubtest.cy.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/armanabbassii/API-testing-with-Cypress.git"
@@ -18,6 +16,8 @@
   },
   "homepage": "https://github.com/armanabbassii/API-testing-with-Cypress#readme",
   "devDependencies": {
+    "@playwright/test": "^1.38.1",
+    "@types/node": "^20.6.3",
     "cypress": "^12.16.0"
   },
   "dependencies": {
